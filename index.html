@@ -912,19 +912,75 @@
       line-height: 1.8;
     }
 
-    /* ===== Organizer Logo ===== */
-    .organizer-logo {
-      display: flex;
-      align-items: center;
-      gap: 12px;
+    /* ===== Organizers Section ===== */
+    .organizers {
+      padding: 80px 0;
+      border-top: 1px solid rgba(242, 111, 36, 0.07);
+      border-bottom: 1px solid rgba(242, 111, 36, 0.07);
     }
 
-    .organizer-logo img {
-      height: 36px;
-      width: auto;
+    .organizers-inner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 80px;
+    }
+
+    .organizers-block {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .organizers-role {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: #F26F24;
+    }
+
+    .organizers-logo-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: center;
       background: #fff;
-      border-radius: 6px;
-      padding: 4px 8px;
+      border-radius: 12px;
+      padding: 20px 32px;
+      min-width: 240px;
+      min-height: 100px;
+    }
+
+    .organizers-logo-wrap img {
+      max-height: 80px;
+      width: auto;
+      max-width: 200px;
+    }
+
+    .organizers-logo-text {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #1a1a2e;
+      letter-spacing: 0.02em;
+    }
+
+    .organizers-divider {
+      width: 1px;
+      height: 120px;
+      background: rgba(242, 111, 36, 0.15);
+    }
+
+    @media (max-width: 768px) {
+      .organizers-inner {
+        flex-direction: column;
+        gap: 48px;
+      }
+
+      .organizers-divider {
+        width: 120px;
+        height: 1px;
+      }
     }
 
     /* ===== CTA ===== */
@@ -1504,12 +1560,7 @@
           </div>
           <div class="outline-row">
             <div class="outline-label">主催</div>
-            <div class="outline-value">
-              <div class="organizer-logo">
-                <img src="f-ventures-logo.png" alt="F Ventures">
-                <span>F Ventures</span>
-              </div>
-            </div>
+            <div class="outline-value">F Ventures</div>
           </div>
           <div class="outline-row">
             <div class="outline-label">共催</div>
@@ -1530,6 +1581,27 @@
           <div class="outline-row">
             <div class="outline-label">定員</div>
             <div class="outline-value">100名（先着順）</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Organizers ===== -->
+  <section class="organizers">
+    <div class="container">
+      <div class="organizers-inner fade-up">
+        <div class="organizers-block">
+          <div class="organizers-role">主催</div>
+          <div class="organizers-logo-wrap">
+            <img src="f-ventures-logo.png" alt="F Ventures">
+          </div>
+        </div>
+        <div class="organizers-divider"></div>
+        <div class="organizers-block">
+          <div class="organizers-role">共催</div>
+          <div class="organizers-logo-wrap organizers-logo-text">
+            西日本シティ銀行
           </div>
         </div>
       </div>
